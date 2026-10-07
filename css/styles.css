@@ -81,21 +81,27 @@ a:hover { color: var(--ink); }
 .header-bar {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0.65rem 1rem;
+  padding: 0.65rem 0.75rem;
   display: flex;
   align-items: center;
-  gap: 0.75rem 1rem;
+  gap: 0.5rem 0.65rem;
   min-height: var(--header-h);
+  width: 100%;
+  box-sizing: border-box;
 }
 .signboard {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+  font-size: clamp(1.05rem, 2.5vw, 1.55rem);
   letter-spacing: 0.02em;
   color: var(--ink);
   text-decoration: none;
   white-space: nowrap;
   line-height: 1.1;
+  min-width: 0;
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .signboard:hover { color: var(--rose-deep); }
 .order-link {
@@ -542,6 +548,18 @@ body.is-locked {
   margin: 0 0 0.75rem;
 }
 
+
+@media (max-width: 399px) {
+  .header-cta {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    font-size: 0.88rem;
+    min-height: 40px;
+  }
+  .signboard {
+    font-size: clamp(0.98rem, 4.2vw, 1.2rem);
+  }
+}
 @media (min-width: 640px) {
   .gallery__grid--interiors {
     grid-template-columns: repeat(3, 1fr);
