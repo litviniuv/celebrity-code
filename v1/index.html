@@ -11,21 +11,22 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../logos/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../logos/apple-touch-icon.png">
 <link rel="preload" href="../fonts/cormorant-garamond-600-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../fonts/cormorant-garamond-500-italic-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/manrope-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../css/fonts.css">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <div class="demo-strip" role="note">
   <div class="demo-strip__inner">
     <span class="demo-strip__label">ДЕМОНСТРАЦИЯ! НЕ ОФИЦИАЛЬНЫЙ САЙТ БИЗНЕСА</span>
     <nav class="demo-switch" aria-label="Варианты демо">
-      <a href="../v1/">v1</a>
+      <a href="./" aria-current="page">v1</a>
       <a href="../">v2</a>
-      <a href="./" aria-current="page">v3</a>
+      <a href="../v3/">v3</a>
     </nav>
   </div>
 </div>
+
 <header class="site-header">
   <div class="header-bar">
     <a class="signboard" href="../">Celebrity Code</a>
@@ -41,6 +42,7 @@
     </button>
   </div>
 </header>
+
 <nav class="nav-panel" id="nav-panel" aria-label="Мобильное меню">
   <ul class="nav-panel__list">
     <li><a href="#about">О салоне</a></li>
@@ -53,28 +55,24 @@
     <p><a href="tel:+79582333544">+7 958 233-35-44</a></p>
   </div>
 </nav>
+
 <main>
-  <section class="hero-v3" aria-label="Первый экран">
-    <div class="hero-v3__copy">
-      <p class="hero-v3__brow">Екатеринбург · ул. Горького, 36 · 1 этаж</p>
-      <h1 class="hero-v3__service">Премиальный салон красоты</h1>
-      <p class="hero-v3__hand">Celebrity Code</p>
-      <p class="hero-v3__line">Окрашивание, стрижки, уходы, брови, макияж, маникюр и педикюр – на уровне, к которому хочется возвращаться. Угощение в зале и парковка с валидацией талона.</p>
+  <section class="hero" aria-label="Первый экран">
+    <div class="hero__media">
+      <img src="../images/interior-01.jpg" alt="Просторный зал Celebrity Code с панорамными окнами и розовыми шторами" width="960" height="1280" fetchpriority="high">
+    </div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Celebrity Code</p>
+      <h1>Премиальный салон красоты в Екатеринбурге</h1>
+      <p class="hero__lead">Окрашивание, стрижки, уходы, брови, макияж, маникюр и педикюр – на уровне, к которому хочется возвращаться. Просторный стильный зал, внимательные администраторы и мастера, к которым возвращаются.</p>
       <div class="hero__actions">
         <a class="btn btn--accent" href="https://n941778.yclients.com/company/560868/" target="_blank" rel="noopener noreferrer">Записаться</a>
-        <a class="btn btn--ghost" href="tel:+79582333544">Позвонить</a>
+        <a class="btn btn--light" href="tel:+79582333544">Позвонить</a>
       </div>
     </div>
-    <div class="hero-v3__photo">
-      <img src="../images/work-07.jpg" alt="Светлые волны – работа салона" width="393" height="700">
-    </div>
-    <ul class="hero-v3__facts">
-      <li>Просторный стильный интерьер</li>
-      <li>Сильные мастера и аккуратная работа</li>
-      <li>Запись онлайн на удобный день</li>
-    </ul>
   </section>
-<section class="section" id="about">
+
+  <section class="section" id="about">
     <div class="section__inner">
       <h2 class="section__title">О салоне</h2>
       <div class="prose">
@@ -119,7 +117,7 @@
       <div class="gallery__block">
         <p class="gallery__label">Зал и атмосфера</p>
         <div class="gallery__grid gallery__grid--interiors">
-          <figure><img src="../images/interior-01.jpg" alt="Просторный зал Celebrity Code с панорамными окнами и розовыми шторами" width="960" height="1280" loading="lazy"></figure>
+          <figure><img src="../images/interior-02.jpg" alt="Рабочие места у больших окон салона" width="960" height="1280" loading="lazy"></figure>
           <figure><img src="../images/interior-03.jpg" alt="Ряд станций с мягким светом на потолке" width="960" height="1280" loading="lazy"></figure>
           <figure><img src="../images/interior-04.jpg" alt="Зона отдыха с креслом и растениями" width="675" height="900" loading="lazy"></figure>
           <figure><img src="../images/interior-05.jpg" alt="Витрина с уходовой косметикой и креслом" width="900" height="675" loading="lazy"></figure>
@@ -157,11 +155,26 @@
         <div class="contacts-card">
           <h3>Контакты</h3>
           <ul class="contacts-list">
-            <li><strong>Адрес</strong> Екатеринбург, ул. Горького, 36, 1 этаж</li>
-            <li><strong>Метро</strong> м. Геологическая (~520 м)</li>
-            <li><strong>Телефон</strong> <a href="tel:+79582333544">+7 958 233-35-44</a></li>
-            <li><strong>Telegram</strong> <a href="https://t.me/celebritycode2026" target="_blank" rel="noopener noreferrer">t.me/celebritycode2026</a></li>
-            <li><strong>MAX</strong> <a href="https://max.ru/u/f9LHodD0cOIdNxiGwpYgcu-uURk3g34Nb84Rll1ooj0iKbLp18bZekfVQBA" target="_blank" rel="noopener noreferrer">Написать в MAX</a></li>
+            <li>
+              <strong>Адрес</strong>
+              Екатеринбург, ул. Горького, 36, 1 этаж
+            </li>
+            <li>
+              <strong>Метро</strong>
+              м. Геологическая (~520 м)
+            </li>
+            <li>
+              <strong>Телефон</strong>
+              <a href="tel:+79582333544">+7 958 233-35-44</a>
+            </li>
+            <li>
+              <strong>Telegram</strong>
+              <a href="https://t.me/celebritycode2026" target="_blank" rel="noopener noreferrer">t.me/celebritycode2026</a>
+            </li>
+            <li>
+              <strong>MAX</strong>
+              <a href="https://max.ru/u/f9LHodD0cOIdNxiGwpYgcu-uURk3g34Nb84Rll1ooj0iKbLp18bZekfVQBA" target="_blank" rel="noopener noreferrer">Написать в MAX</a>
+            </li>
           </ul>
           <p class="rating-line">5,0 на Яндекс Картах · 241 оценка · по данным на 07.10.2026</p>
           <p class="award-line">«Хорошее место 2026» · Яндекс Карты · по данным на 07.10.2026</p>
@@ -171,7 +184,11 @@
             <a class="btn btn--ghost" href="https://yandex.ru/maps/org/celebrity_code/54910618057/" target="_blank" rel="noopener noreferrer">Построить маршрут</a>
           </div>
         </div>
-        <div class="map-wrap" id="map-wrap" data-map-src="https://yandex.ru/map-widget/v1/?ll=60.6073%2C56.8293&amp;z=17&amp;pt=60.6073,56.8293&amp;l=map">
+        <div
+          class="map-wrap"
+          id="map-wrap"
+          data-map-src="https://yandex.ru/map-widget/v1/?ll=60.6073%2C56.8293&amp;z=17&amp;pt=60.6073,56.8293&amp;l=map"
+        >
           <div class="map-placeholder">
             <button class="btn btn--accent" id="show-map" type="button">Показать карту</button>
           </div>
@@ -180,15 +197,18 @@
     </div>
   </section>
 </main>
+
 <footer class="site-footer">
   <div class="site-footer__inner">
     <span>ДЕМОНСТРАЦИЯ! НЕ ОФИЦИАЛЬНЫЙ САЙТ БИЗНЕСА</span>
     <a href="https://litviniuv.ru/webstudio/">Веб-студия Юрия Литвина</a>
     <a href="https://litviniuv.ru/webstudio/order/?c=h4xt">Заказать сайт</a>
   </div>
-  <div class="footer-privacy"><a href="../privacy/">Политика конфиденциальности</a></div>
+  <div class="footer-privacy">
+    <a href="../privacy/">Политика конфиденциальности</a>
+  </div>
 </footer>
+
 <script src="../js/main.js" defer></script>
-<script src="main.js" defer></script>
 </body>
 </html>
