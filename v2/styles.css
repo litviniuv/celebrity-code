@@ -19,21 +19,21 @@ body {
   background-attachment: fixed;
 }
 
-/* Mobile ≤899: dedicated interior-01 crop + top-weighted scrim (photo reads, cream text holds) */
+/* Mobile ≤899: work-01 nail close-up — square focal survives cover at ~360; dark scrim for cream text */
 @media (max-width: 899px) {
   body {
     background-image:
       linear-gradient(
         180deg,
-        rgba(18,12,10,0.58) 0%,
-        rgba(28,22,20,0.30) 26%,
-        rgba(28,22,20,0.22) 48%,
-        rgba(28,22,20,0.55) 72%,
-        rgba(18,12,10,0.82) 100%
+        rgba(16,12,10,0.72) 0%,
+        rgba(22,16,14,0.52) 22%,
+        rgba(28,22,20,0.38) 45%,
+        rgba(22,16,14,0.58) 70%,
+        rgba(14,10,8,0.86) 100%
       ),
-      url("../images/interior-01-mobile.jpg");
+      url("../images/work-01-mobile.jpg");
     background-size: cover;
-    background-position: center 18%;
+    background-position: center 42%;
     background-attachment: scroll;
   }
 }
