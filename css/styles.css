@@ -413,8 +413,13 @@ body.is-locked {
   background: var(--bg-soft);
   aspect-ratio: 3 / 4;
 }
-.gallery__grid--interiors figure:nth-child(5),
-.gallery__grid--interiors figure:nth-child(n+8) {
+/* Interiors: portraits in --interiors (full rows), landscapes in --interiors-wide (always 3-col = full row) */
+.gallery__grid--interiors-wide {
+  margin-top: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.gallery__grid--interiors-wide figure,
+.gallery__fig--wide {
   aspect-ratio: 4 / 3;
 }
 .gallery__grid img {
