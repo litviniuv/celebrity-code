@@ -1,5 +1,5 @@
 /* Variant 2 · exp_prompts #7 Strong photo behind giant word */
-@import url("../css/styles.css");
+@import url("css/styles.css");
 
 :root {
   --v2-ink: #fffaf6;
@@ -13,7 +13,7 @@ html, body {
 
 body {
   background-image: linear-gradient(180deg, rgba(28,22,20,0.35) 0%, rgba(28,22,20,0.72) 45%, rgba(28,22,20,0.88) 100%),
-    url("../images/interior-02.jpg");
+    url("images/interior-02.jpg");
   background-size: cover;
   background-position: center 30%;
   background-attachment: fixed;
@@ -128,7 +128,7 @@ body {
 }
 .map-placeholder {
   background: linear-gradient(180deg, rgba(28,22,20,0.7), rgba(28,22,20,0.85)),
-    url("../images/interior-05.jpg") center/cover;
+    url("images/interior-05.jpg") center/cover;
 }
 .gallery__label { color: rgba(255,250,246,0.55); }
 .gallery__grid figure {
