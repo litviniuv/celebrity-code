@@ -69,29 +69,6 @@ a:hover { color: var(--ink); }
   justify-content: center;
 }
 .demo-strip__label { font-weight: 600; text-transform: uppercase; }
-.demo-switch {
-  display: flex;
-  gap: 0.35rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.demo-switch a {
-  color: #f7f1eb;
-  text-decoration: none;
-  border: 1px solid rgba(247, 241, 235, 0.35);
-  border-radius: 999px;
-  padding: 0.2rem 0.65rem;
-  font-size: 11px;
-  letter-spacing: 0.02em;
-  min-height: 28px;
-  display: inline-flex;
-  align-items: center;
-}
-.demo-switch a[aria-current="page"],
-.demo-switch a:hover {
-  background: rgba(247, 241, 235, 0.14);
-  border-color: #f7f1eb;
-}
 
 .site-header {
   position: sticky;
