@@ -19,13 +19,21 @@ body {
   background-attachment: fixed;
 }
 
-/* Mobile: scroll bg, brighter crop, softer scrim — avoid fixed+center plant mud */
+/* Mobile ≤899: dedicated interior-01 crop + top-weighted scrim (photo reads, cream text holds) */
 @media (max-width: 899px) {
   body {
-    background-image: linear-gradient(180deg, rgba(28,22,20,0.18) 0%, rgba(28,22,20,0.42) 50%, rgba(28,22,20,0.70) 100%),
-      url("../images/interior-02-mobile.jpg");
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(18,12,10,0.58) 0%,
+        rgba(28,22,20,0.30) 26%,
+        rgba(28,22,20,0.22) 48%,
+        rgba(28,22,20,0.55) 72%,
+        rgba(18,12,10,0.82) 100%
+      ),
+      url("../images/interior-01-mobile.jpg");
     background-size: cover;
-    background-position: center 28%;
+    background-position: center 18%;
     background-attachment: scroll;
   }
 }
