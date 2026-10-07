@@ -46,7 +46,7 @@ body {
   display: grid;
   align-items: end;
   position: relative;
-  padding: 5.5rem 1rem 2.5rem;
+  padding: 5.5rem 1rem 1.75rem;
   overflow: hidden;
   width: 100%;
   max-width: 100%;
@@ -60,13 +60,15 @@ body {
   width: 100%;
   max-width: 100%;
   transform: translate(-50%, -50%);
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   box-sizing: border-box;
   text-align: center;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(3.4rem, 16vw, 11rem);
-  line-height: 0.85;
+  line-height: 1.05;
+  padding-block: 0.06em;
   letter-spacing: 0.02em;
   color: #fffaf6;
   background: none;
@@ -95,15 +97,16 @@ body {
 }
 .hero-v2 h1 {
   font-family: var(--font-display);
-  font-size: clamp(1.7rem, 4vw, 2.4rem);
-  margin: 0 0 0.75rem;
+  font-size: clamp(1.05rem, 4.6vw, 2.4rem);
+  margin: 0 0 0.45rem;
   font-weight: 600;
-  max-width: 18ch;
+  max-width: none;
+  white-space: nowrap;
   color: #fffaf6;
   text-shadow: 0 2px 8px rgba(0,0,0,0.55), 0 8px 30px rgba(0,0,0,0.4);
 }
 .hero-v2__lead {
-  margin: 0 0 1.25rem;
+  margin: 0 0 1rem;
   max-width: 34rem;
   color: rgba(255, 250, 246, 0.92);
   text-shadow: 0 2px 6px rgba(0,0,0,0.5), 0 4px 18px rgba(0,0,0,0.35);
