@@ -19,6 +19,18 @@ body {
   background-attachment: fixed;
 }
 
+/* Mobile: scroll bg, brighter crop, softer scrim — avoid fixed+center plant mud */
+@media (max-width: 899px) {
+  body {
+    background-image: linear-gradient(180deg, rgba(28,22,20,0.18) 0%, rgba(28,22,20,0.42) 50%, rgba(28,22,20,0.70) 100%),
+      url("../images/interior-02-mobile.jpg");
+    background-size: cover;
+    background-position: center 28%;
+    background-attachment: scroll;
+  }
+}
+
+
 .site-header {
   background: rgba(28, 22, 20, 0.72);
   border-bottom-color: rgba(255,250,246,0.12);
