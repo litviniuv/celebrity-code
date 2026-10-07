@@ -54,11 +54,12 @@ body {
 }
 .hero-v2__word {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 50%;
+  right: auto;
   top: 12%;
   width: 100%;
   max-width: 100%;
+  transform: translateX(-50%);
   overflow: hidden;
   box-sizing: border-box;
   text-align: center;

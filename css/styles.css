@@ -161,6 +161,9 @@ a:hover { color: var(--ink); }
   border-color: rgba(255,255,255,0.4);
 }
 .header-cta { flex-shrink: 0; }
+@media (max-width: 899px) {
+  .header-cta { margin-left: auto; }
+}
 .menu-toggle {
   display: inline-flex;
   align-items: center;
