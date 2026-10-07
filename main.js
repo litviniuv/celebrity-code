@@ -1,61 +1,25 @@
 (function () {
-  /* Opt into gallery circle reveal only after JS runs (progressive enhancement). */
-  document.documentElement.classList.add("js-reveal");
+  var body = document.body;
+  var photo = document.querySelector(".hero-v3__photo");
+  var fine = window.matchMedia("(pointer: fine)").matches;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  var figs = document.querySelectorAll(".gallery__grid figure");
-  if (!figs.length) return;
-
-  function reveal(el) {
-    el.classList.add("is-in");
-  }
-
-  function nearViewport(el) {
-    var r = el.getBoundingClientRect();
-    var vh = window.innerHeight || document.documentElement.clientHeight;
-    return r.top < vh + 80 && r.bottom > -80;
-  }
-
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    figs.forEach(reveal);
-    return;
-  }
-
-  if (!("IntersectionObserver" in window)) {
-    figs.forEach(reveal);
-    return;
-  }
-
-  var io = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          reveal(entry.target);
-          io.unobserve(entry.target);
+  if (fine && !reduce) {
+    window.addEventListener(
+      "pointermove",
+      function (event) {
+        var x = (event.clientX / window.innerWidth) * 100;
+        var y = (event.clientY / window.innerHeight) * 100;
+        body.style.setProperty("--spot-x", x + "%");
+        body.style.setProperty("--spot-y", y + "%");
+        if (photo) {
+          var dx = (event.clientX / window.innerWidth - 0.5) * 6;
+          var dy = (event.clientY / window.innerHeight - 0.5) * 4;
+          var hard = event.buttons === 1 ? 2 : 1;
+          photo.style.transform = "rotate(" + (-4 + dx * hard) + "deg) translateY(" + dy + "px)";
         }
-      });
-    },
-    { threshold: 0, rootMargin: "80px 0px 80px 0px" }
-  );
-
-  figs.forEach(function (f) {
-    io.observe(f);
-    if (nearViewport(f)) reveal(f);
-  });
-
-  function safetyNet() {
-    figs.forEach(function (el) {
-      if (el.classList.contains("is-in")) return;
-      if (nearViewport(el)) reveal(el);
-    });
+      },
+      { passive: true }
+    );
   }
-
-  if (document.readyState === "complete") {
-    requestAnimationFrame(safetyNet);
-  } else {
-    window.addEventListener("load", function () {
-      requestAnimationFrame(safetyNet);
-    });
-  }
-  window.addEventListener("scroll", safetyNet, { passive: true });
-  window.addEventListener("resize", safetyNet);
 })();
