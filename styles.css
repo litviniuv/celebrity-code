@@ -19,13 +19,50 @@ body {
   background-attachment: fixed;
 }
 
-/* Mobile ≤899: no photo bg (never stretch) — solid brand ink + soft depth gradient */
+/* Mobile ≤899: rich layered brand wash — NO photo (never stretch) */
 @media (max-width: 899px) {
   body {
-    background-image: linear-gradient(180deg, #241c19 0%, #1c1614 45%, #140f0d 100%);
+    isolation: isolate;
+    background-color: #1c1614;
+    background-image:
+      radial-gradient(ellipse 110% 70% at 50% -5%, rgba(255, 250, 246, 0.07) 0%, transparent 52%),
+      radial-gradient(ellipse 85% 55% at -5% 28%, rgba(196, 120, 140, 0.26) 0%, transparent 58%),
+      radial-gradient(ellipse 75% 50% at 105% 48%, rgba(168, 96, 118, 0.2) 0%, transparent 55%),
+      radial-gradient(ellipse 90% 55% at 55% 105%, rgba(72, 48, 40, 0.55) 0%, transparent 58%),
+      linear-gradient(168deg, #241c19 0%, #1c1614 42%, #140f0d 100%);
     background-size: auto;
     background-position: initial;
     background-attachment: scroll;
+  }
+
+  /* Soft mauve / warm-brown accent blobs (curtain vibe) */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -25% -15%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 22% 18%, rgba(210, 140, 158, 0.38) 0%, transparent 42%),
+      radial-gradient(circle at 78% 42%, rgba(150, 88, 108, 0.3) 0%, transparent 40%),
+      radial-gradient(circle at 40% 78%, rgba(100, 62, 52, 0.42) 0%, transparent 44%),
+      radial-gradient(circle at 88% 88%, rgba(255, 250, 246, 0.05) 0%, transparent 36%);
+    filter: blur(52px);
+    opacity: 0.95;
+  }
+
+  /* Subtle film grain / noise — low opacity */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.055;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 160px 160px;
+    background-repeat: repeat;
+    mix-blend-mode: soft-light;
   }
 }
 
